@@ -6,7 +6,7 @@
 
 Помимо фетчинга и рендеринга ты также сделаешь кнопку для обновления изображения на новое (без перезагрузки страницы).
 
-После челленджа у тебя должна получиться такая страница: [intocode.github.io/fetch-dog-seo-demo](https://intocode.github.io/fetch-dog-seo-demo/index.html) (не подглядывай код!!!)
+После челленджа у тебя должна получиться такая страница: [intocode.github.io/fetch-dog-ceo-demo](https://intocode.github.io/fetch-dog-ceo-demo/index.html) (не подглядывай код!!!)
 
 ## Releases
 
