@@ -27,8 +27,9 @@ document.addEventListener('DOMContentLoaded', () => {
   button.addEventListener('click', () => {
     fetchAndRenderImages();
   });
-
+   
   function fetchAndRenderImages() {
+    imagesContainer.textContent = ""
       fetch(IMAGES_URL)
         .then(res =>  res.json())
         .then(data => {
