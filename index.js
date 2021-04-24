@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const IMAGES_URL = `https://dog.ceo/api/breeds/image/random/${IMAGES_COUNT}`;
 
   // ссылка для загрузки списка пород
-  const BREEDS_URL = "https://dog.ceo/api/breeds/list/all";
+  const BREEDS_URL = "https://dog.ceo/api/breeds/list";
 
   // узел, в котором будет список изображений
   const imagesContainer = document.querySelector('.images');
@@ -28,6 +28,29 @@ document.addEventListener('DOMContentLoaded', () => {
     fetchAndRenderImages();
   });
 
-  // ТВОЙ КОД
+  function fetchAndRenderImages() {
+      fetch(IMAGES_URL)
+        .then(res =>  res.json())
+        .then(data => {
+        for(let i = 0; i < data.message.length; i++) {
+        imagesContainer.classList.add('images__item')
+        const img = document.createElement('img');
+        img.src = data.message[i];
+        imagesContainer.append(img);
+         }
+    })
+  }
+
+  function fetchBreedsList() {
+    fetch(BREEDS_URL)
+    .then(res => res.json())
+    .then(text => {
+      for(let i = 0; i < text.message.length; i++) {
+        const li = document.createElement('li');
+        li.textContent = text.message[i]
+        breedsContainer.append(li)
+      }
+    })
+  }
   
 });
